@@ -639,9 +639,9 @@ public:
 	void cleanup();
 	void cpu_init();
 	void init_spu_decoder();
-    static const u32 m_batch_counter = 0;
-    static const u32 m_batch_size = 1000;  // Configurable batch size
-    bool m_in_batch = false;
+    static const u32 m_batch_remaining = 0;
+    static const u32 m_batch_size = 1000;  // Instructions per batch
+    static const bool m_in_batch = false;
 
 	static const u32 id_base = 0x02000000; // TODO (used to determine thread type)
 	static const u32 id_step = 1;
